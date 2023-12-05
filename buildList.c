@@ -40,10 +40,22 @@ void print(struct node* head)
 	printf("\n");
 }
 
+// Liberar memoria
+void freeMemory(struct node* head)
+{
+	while(head){
+		struct node* next = head->next;
+		free(head);
+		head = next;
+	}
+}
+
 int main()
 {
 	struct node* lista;
 	lista = BuildOneTwoThree();
+	print(lista);
+	freeMemory(lista);
 	print(lista);
 	return 0;
 }	
