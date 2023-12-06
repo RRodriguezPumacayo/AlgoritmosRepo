@@ -56,6 +56,6 @@ int main()
 	lista = BuildOneTwoThree();
 	print(lista);
 	freeMemory(lista);
-	print(lista);
+
 	return 0;
 }	
