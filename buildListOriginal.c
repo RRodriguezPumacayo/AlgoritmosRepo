@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct node {
 	int data;
@@ -42,7 +43,7 @@ void freeMemory(struct node* head)
 int main()
 {
 	struct node* lista;
-	lista = BuildaOneTwoThree();
+	lista = BuildOneTwoThree();
 	print(lista);
 	freeMemory(lista);
 
