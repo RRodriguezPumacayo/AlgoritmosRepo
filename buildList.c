@@ -10,22 +10,16 @@ struct node {
 // Declaramos la funcion BuildOneTwoThree de tipo node*
 struct node* BuildOneTwoThree()
 {
-	struct node* head = NULL;
-	struct node* second = NULL;
-	struct node* third = NULL;
-
-	head = malloc(sizeof(struct node));
-	second = malloc(sizeof(struct node));
-	third = malloc(sizeof(struct node));
+	struct node* head = malloc(sizeof(struct node));
 
 	head->data = 1;
-	head->next = second;
+	head->next = malloc(sizeof(struct node));
 
-	second->data = 2;
-	second->next = third;
+	head->next->data = 2;
+	head->next->next = malloc(sizeof(struct node));
 
-	third->data = 3;
-	third->next = NULL;
+	head->next->next->data = 3;
+	head->next->next->next = NULL;
 
 	return head;
 }
